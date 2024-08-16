@@ -1,0 +1,227 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(120deg, #07a7d3 0%, #f107a7 100%);
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Header Styles */
+header {
+    background-color: rgba(51, 51, 51, 0.9);
+    color: #fff;
+    padding: 10px 0;
+    position: relative;
+    z-index: 1;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav h1 {
+    font-size: 24px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f4f4f4;
+}
+
+/* Section Styles */
+.section {
+    padding: 60px 20px;
+    text-align: center; /* Center text in sections */
+    position: relative;
+    z-index: 1;
+}
+
+.home-content {
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.home-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    margin-top: 20px;
+}
+
+.photo {
+    margin-bottom: 20px;
+    width: 100%; /* Ensure the container takes full width */
+}
+
+.photo img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover; /* Ensures the image covers the container */
+}
+
+.bio {
+    text-align: center; /* Center text */
+    padding: 0 20px;
+}
+
+.contact-info {
+    margin-top: 20px;
+    text-align: center; /* Center text */
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgba(51, 51, 51, 0.9);
+    color: #fff;
+    text-align: center; /* Center text */
+    padding: 10px 0;
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row;
+        text-align: left; /* Left align text for larger screens */
+    }
+
+    .photo {
+        margin-bottom: 0;
+        margin-right: 20px;
+    }
+
+    .bio {
+        text-align: left; /* Left align text for larger screens */
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    nav h1 {
+        font-size: 20px;
+    }
+
+    .home-content h2 {
+        font-size: 24px;
+    }
+
+    .bio p {
+        font-size: 16px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 6px 12px;
+    }
+}
+
+/* Background Animation */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    z-index: 0;
+    pointer-events: none;
+    animation: gradientAnimation 10s infinite alternate;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
